@@ -33,3 +33,5 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+GGJ18/Assets/ShaderForge
+ShaderForge.meta
