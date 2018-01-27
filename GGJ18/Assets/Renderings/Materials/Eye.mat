@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Eye
-  m_Shader: {fileID: 10755, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 4800000, guid: d88f306be3ef74bb9b4c1332788af6ee, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
@@ -19,7 +19,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BRDF:
-        m_Texture: {fileID: 2800000, guid: f9297f2365a3b4deb9061ff1a8edeaa8, type: 3}
+        m_Texture: {fileID: 2800000, guid: c5eee8a835b15634caccb8ba1a85f77b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -70,6 +70,7 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
+    - _Oultine: 0.1471338
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -79,3 +80,4 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 0.7866709, b: 0.6819462, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _LineColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
