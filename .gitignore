@@ -35,3 +35,5 @@ sysinfo.txt
 *.unitypackage
 GGJ18/Assets/ShaderForge
 ShaderForge.meta
+GGJ18/ProjectSettings/EditorBuildSettings.asset
+GGJ18/ProjectSettings/EditorBuildSettings.asset
