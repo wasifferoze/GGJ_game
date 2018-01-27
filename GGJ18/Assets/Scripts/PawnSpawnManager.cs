@@ -14,7 +14,6 @@ namespace AssemblyCSharp.Scripts
 
         [SerializeField] public CollisionManager CollisionManager;
         [SerializeField] public Pawn PawnPrefabToSpawn;
-        [SerializeField] public Rect SpawnArea;
 
         public void InitializePool(int poolSize = 30)
         {
@@ -40,8 +39,8 @@ namespace AssemblyCSharp.Scripts
 
         public Vector3 GetRandomSpawnPosition()
         {
-            var x = Random.Range(SpawnArea.xMin, SpawnArea.xMax);
-            var z = Random.Range(SpawnArea.yMin, SpawnArea.yMax);
+            var x = Random.Range(CollisionManager.StageArea.xMin, CollisionManager.StageArea.xMax);
+            var z = Random.Range(CollisionManager.StageArea.yMin, CollisionManager.StageArea.yMax);
             return new Vector3(x, 0, z);
         }
 
@@ -61,17 +60,4 @@ namespace AssemblyCSharp.Scripts
             return spawned;
         }
     }
-
-#if UNITY_EDITOR
-    [CustomEditor(typeof(PawnSpawnManager))]
-    public class PawnSpawnManagerEditor : Editor
-    {
-        public void OnDrawGizmos()
-        {
-            var manager = target as PawnSpawnManager;
-            Gizmos.color = Color.red;
-            Gizmos.DrawCube(manager.SpawnArea.center, manager.SpawnArea.size);
-        }
-    }
-#endif
 }

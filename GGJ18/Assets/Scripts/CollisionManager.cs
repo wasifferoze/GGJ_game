@@ -7,13 +7,15 @@ namespace AssemblyCSharp.Scripts
     [CreateAssetMenu()]
     public class CollisionManager : Manager
     {
+        [SerializeField] public Rect StageArea;
+
         public readonly List<ICollidable> Collidables = new List<ICollidable>();
 
         public void Init()
         {
             Collidables.Clear();
         }
-        
+
         public IEnumerator FindCollision()
         {
             while (true)
@@ -41,6 +43,34 @@ namespace AssemblyCSharp.Scripts
                         {
                             A.OnCollide(B, delta);
                             B.OnCollide(A, -delta);
+                        }
+
+                        // Wrap to stage
+                        var pos = A.GetPosition();
+                        var a = A.GetAngle();
+                        if (pos.x < StageArea.xMin)
+                        {
+                            pos.x = StageArea.xMin;
+                            A.SetPosition(pos);
+                            A.SetAngle(Mathf.Atan2(Mathf.Cos(-a), Mathf.Sin(-a)));
+                        }
+                        else if (pos.x > StageArea.xMax)
+                        {
+                            pos.x = StageArea.xMax;
+                            A.SetPosition(pos);
+                            A.SetAngle(Mathf.Atan2(Mathf.Cos(-a), Mathf.Sin(-a)));
+                        }
+                        else if (pos.y < StageArea.yMin)
+                        {
+                            pos.y = StageArea.yMin;
+                            A.SetPosition(pos);
+                            A.SetAngle(Mathf.Atan2(Mathf.Cos(Mathf.PI - a), Mathf.Sin(Mathf.PI - a)));
+                        }
+                        else if (pos.y > StageArea.yMax)
+                        {
+                            pos.y = StageArea.yMax;
+                            A.SetPosition(pos);
+                            A.SetAngle(Mathf.Atan2(Mathf.Cos(Mathf.PI - a), Mathf.Sin(Mathf.PI - a)));
                         }
                     }
                 }

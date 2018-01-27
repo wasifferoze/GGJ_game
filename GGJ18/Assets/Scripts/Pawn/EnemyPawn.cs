@@ -1,23 +1,31 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
 namespace AssemblyCSharp.Scripts
 {
     public sealed class EnemyPawn : Pawn
     {
-        private NavMeshAgent NavMeshAgentCache;
-
         protected override void Init()
         {
-            NavMeshAgentCache = GetComponent<NavMeshAgent>();
+            StartCoroutine(Wandering());
+        }
 
-            NavMeshAgentCache.Move(new Vector3(
-                x: Random.Range(-1.0f, 1.0f),
-                y: 0.0f,
-                z: Random.Range(-1.0f, 1.0f)
-            ));
+        private IEnumerator Wandering()
+        {
+            float nextRotate = Time.time + Random.Range(0.1f, 0.5f);
+            SetAngle(Random.value * Mathf.PI - Mathf.PI * 2.0f);
+
+            CurrentSpeed = Random.value * 0.5f + 2.5f;
+            while (true)
+            {
+                if (Time.time > nextRotate)
+                {
+                    nextRotate = Time.time + Random.Range(1.5f, 2.0f);
+                    SetAngle(GetAngle() + Random.Range(-25.0f, 25.0f) * Mathf.Deg2Rad);
+                }
+
+                yield return null;
+            }
         }
     }
 }

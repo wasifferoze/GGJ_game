@@ -11,3 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 183f3cab95a5d4145acc57d6ab521c01, type: 3}
   m_Name: CollisionManager
   m_EditorClassIdentifier: 
+  StageArea:
+    serializedVersion: 2
+    x: -144
+    y: -7
+    width: 144
+    height: 14

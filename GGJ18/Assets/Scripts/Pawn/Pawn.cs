@@ -107,7 +107,8 @@ namespace AssemblyCSharp.Scripts
                                 z: CurrentSpeed * Mathf.Sin(CurrentAngle)
                             );
             transform.position += speed * Time.deltaTime;
-            transform.forward = speed.sqrMagnitude > 0.25f ? speed : transform.forward.normalized;
+            Vector3 targetForward = speed.sqrMagnitude > 0.25f ? speed : transform.forward.normalized;
+            transform.forward = Vector3.Lerp(transform.forward, targetForward, 0.025f * Time.time);
         }
 
         protected virtual void Init()
