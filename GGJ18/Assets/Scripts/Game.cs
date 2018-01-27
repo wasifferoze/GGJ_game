@@ -6,6 +6,7 @@ namespace AssemblyCSharp.Scripts
     {
         public CollisionManager CollisionManager;
         public LevelGenerationManager LevelGenerationManager;
+        public PawnSpawnManager PawnSpawnManager;
 
         void Start()
         {
