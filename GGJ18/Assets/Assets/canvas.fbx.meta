@@ -1,0 +1,228 @@
+fileFormatVersion: 2
+guid: 976fc9bc4f09a7443b584ed759e8d804
+timeCreated: 1517032491
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: body
+    100002: body_0
+    100004: body_1
+    100006: //RootNode
+    100008: eyeL
+    100010: eyeL 1
+    100012: eyeL 2
+    100014: eyeR
+    100016: eyeR 1
+    100018: eyeR 2
+    100020: head_Cat
+    100022: head_Dog
+    100024: head_Rabbit3
+    100026: helmet
+    100028: helmet 1
+    100030: helmet 2
+    100032: main
+    100034: platform_0
+    100036: platform_1
+    100038: platform_10
+    100040: platform_2
+    100042: platform_4
+    100044: platform_5
+    100046: platform_6
+    100048: platform_7
+    100050: platform_8
+    100052: platform_9
+    100054: spaceStation
+    100056: window
+    400000: body
+    400002: body_0
+    400004: body_1
+    400006: //RootNode
+    400008: eyeL
+    400010: eyeL 1
+    400012: eyeL 2
+    400014: eyeR
+    400016: eyeR 1
+    400018: eyeR 2
+    400020: head_Cat
+    400022: head_Dog
+    400024: head_Rabbit3
+    400026: helmet
+    400028: helmet 1
+    400030: helmet 2
+    400032: main
+    400034: platform_0
+    400036: platform_1
+    400038: platform_10
+    400040: platform_2
+    400042: platform_4
+    400044: platform_5
+    400046: platform_6
+    400048: platform_7
+    400050: platform_8
+    400052: platform_9
+    400054: spaceStation
+    400056: window
+    2100000: lambert1
+    2100002: phong1
+    2300000: body
+    2300002: body_0
+    2300004: body_1
+    2300006: eyeL
+    2300008: eyeL 1
+    2300010: eyeL 2
+    2300012: eyeR
+    2300014: eyeR 1
+    2300016: eyeR 2
+    2300018: head_Cat
+    2300020: head_Dog
+    2300022: head_Rabbit3
+    2300024: helmet
+    2300026: helmet 1
+    2300028: helmet 2
+    2300030: main
+    2300032: platform_0
+    2300034: platform_1
+    2300036: platform_10
+    2300038: platform_2
+    2300040: platform_5
+    2300042: platform_6
+    2300044: platform_7
+    2300046: platform_8
+    2300048: platform_9
+    2300050: spaceStation
+    2300052: window
+    3300000: body
+    3300002: body_0
+    3300004: body_1
+    3300006: eyeL
+    3300008: eyeL 1
+    3300010: eyeL 2
+    3300012: eyeR
+    3300014: eyeR 1
+    3300016: eyeR 2
+    3300018: head_Cat
+    3300020: head_Dog
+    3300022: head_Rabbit3
+    3300024: helmet
+    3300026: helmet 1
+    3300028: helmet 2
+    3300030: main
+    3300032: platform_0
+    3300034: platform_1
+    3300036: platform_10
+    3300038: platform_2
+    3300040: platform_5
+    3300042: platform_6
+    3300044: platform_7
+    3300046: platform_8
+    3300048: platform_9
+    3300050: spaceStation
+    3300052: window
+    4300000: body
+    4300002: eyeR
+    4300004: helmet
+    4300006: eyeL
+    4300008: body_0
+    4300010: eyeR
+    4300012: helmet
+    4300014: eyeL
+    4300016: body_1
+    4300018: eyeR
+    4300020: helmet
+    4300022: eyeL
+    4300024: head_Dog
+    4300026: head_Cat
+    4300028: head_Rabbit3
+    4300030: spaceStation
+    4300032: platform_0
+    4300034: platform_1
+    4300036: platform_2
+    4300038: main
+    4300040: window
+    4300042: platform_5
+    4300044: platform_6
+    4300046: platform_7
+    4300048: platform_8
+    4300050: platform_9
+    4300052: platform_10
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
