@@ -26,4 +26,4 @@ MonoBehaviour:
   GeneratingDirection: 0
   GeneratingRule: 0
   FlipRule: 1
-  ModulesToKeepLoaded: 10
+  ModulesToKeepLoaded: 12
