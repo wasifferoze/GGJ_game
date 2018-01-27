@@ -10,6 +10,7 @@ namespace AssemblyCSharp.Scripts
         void Start()
         {
             InitCollisionManager();
+            InitLevelGenerationManager();
         }
 
         private void InitCollisionManager()

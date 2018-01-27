@@ -11,14 +11,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18afbc075b3413745afec43323f8b8f5, type: 3}
   m_Name: LevelGenerationManager
   m_EditorClassIdentifier: 
-  LevelModules:
-  - {fileID: 1212088352530276, guid: 9f8567932d1fd3741801febe0fc95e20, type: 2}
-  - {fileID: 1083363931628136, guid: f196af9e3628dfe4795a29a9db1397bc, type: 2}
-  - {fileID: 1760516085574368, guid: 9ad9853cecdd1ff4ab09e317ba41115d, type: 2}
-  - {fileID: 1013493488379110, guid: 006132930391e4d45898bbc9cac3060a, type: 2}
-  - {fileID: 1644780865407598, guid: ec6bd02f4dc9f464babb44602559f49b, type: 2}
-  - {fileID: 1850144594104292, guid: d228dcb63916a2f44bc5083bf3fb967a, type: 2}
-  - {fileID: 1663388894581100, guid: 1ea5fa7720012cd4babbeabd33503748, type: 2}
-  - {fileID: 1090174329329244, guid: c28c304fb3a2af947aa6d7291f7993b4, type: 2}
-  - {fileID: 1891427003784204, guid: 92032e93fe950694ba7c87fd25ef9ddc, type: 2}
-  - {fileID: 1023584684428224, guid: adf6366fc5566aa47888f5b166df9db4, type: 2}
+  LevelModulesPool:
+  - {fileID: 1373408477575784, guid: 6d5fe44bad9e47643bc5ff77f57963bc, type: 2}
+  - {fileID: 1028040706326928, guid: 891ef1a7ab2185840ba4e99c8bd4db31, type: 2}
+  - {fileID: 1710704008700898, guid: e4fdd60e4ab875e4694d762e9aad9f3b, type: 2}
+  - {fileID: 1175767549610966, guid: 7a188fbed12ed804dabebdcbd6415349, type: 2}
+  - {fileID: 1833495711824726, guid: fdbda466328b888479d544e23cb1e677, type: 2}
+  - {fileID: 1575301015093464, guid: 38bc8fb6e5bdfb34698eb09373e50d34, type: 2}
+  - {fileID: 1176194746381054, guid: 48d2df1cb644050489308906315bfd59, type: 2}
+  - {fileID: 1246855837049036, guid: 03cdf014706c8824fb3cd38c0a157591, type: 2}
+  - {fileID: 1377357966602588, guid: dd6b5eced7ea36441929a60c4f7e866e, type: 2}
+  - {fileID: 1172682454159550, guid: 4daf7f334f139184b92b84218e8e12cf, type: 2}
+  UnitPerPlatform: -12
+  GeneratingDirection: 0
+  GeneratingRule: 0
+  FlipRule: 1
+  ModulesToKeepLoaded: 10
