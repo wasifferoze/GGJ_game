@@ -6,7 +6,6 @@ namespace AssemblyCSharp.Scripts
 	{
 		protected override void Init ()
 		{
-			
 		}
 	}
 }

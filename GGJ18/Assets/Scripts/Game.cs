@@ -12,6 +12,7 @@ namespace AssemblyCSharp.Scripts
         {
             InitCollisionManager();
             InitLevelGenerationManager();
+            InitializePawnSpawnManager();
         }
 
         private void InitCollisionManager()
@@ -23,6 +24,12 @@ namespace AssemblyCSharp.Scripts
         private void InitLevelGenerationManager()
         {
             LevelGenerationManager.Generate();
+        }
+
+        private void InitializePawnSpawnManager()
+        {
+            PawnSpawnManager.InitializePool();
+            PawnSpawnManager.Spawn(10);
         }
     }
 }
