@@ -62,6 +62,8 @@ Material:
     - _Alpha: 0.52
     - _BumpScale: 1
     - _Cutoff: 0.5
+    - _DarkFogDist: 25.5
+    - _DarkFogDistPower: 5.8
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
@@ -84,6 +86,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _DarkFogColor: {r: 0.17647058, g: 0.12716262, b: 0.15674742, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _LightColor: {r: 0.28676468, g: 0.28676468, b: 0.28676468, a: 1}
     - _LineColor: {r: 0.18382353, g: 0.16354887, b: 0.16354887, a: 1}

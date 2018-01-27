@@ -4,9 +4,10 @@ namespace AssemblyCSharp.Scripts
 {
     public class Game : MonoBehaviour
     {
-        public CollisionManager CollisionManager;
-        public LevelGenerationManager LevelGenerationManager;
-        public PawnSpawnManager PawnSpawnManager;
+        [SerializeField] public CollisionManager CollisionManager;
+        [SerializeField] public LevelGenerationManager LevelGenerationManager;
+        [SerializeField] public PawnSpawnManager PawnSpawnManager;
+        [SerializeField] public int SpawnCount = 30;
 
         void Start()
         {
@@ -29,7 +30,7 @@ namespace AssemblyCSharp.Scripts
         private void InitializePawnSpawnManager()
         {
             PawnSpawnManager.InitializePool();
-            PawnSpawnManager.Spawn(10);
+            PawnSpawnManager.Spawn(SpawnCount);
         }
     }
 }

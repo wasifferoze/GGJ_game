@@ -16,7 +16,7 @@ MonoBehaviour:
     type: 2}
   SpawnArea:
     serializedVersion: 2
-    x: -72
-    y: 0
+    x: -144
+    y: -7
     width: 144
     height: 14

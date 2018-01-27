@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Eye
-  m_Shader: {fileID: 4800000, guid: d88f306be3ef74bb9b4c1332788af6ee, type: 3}
+  m_Shader: {fileID: 4800000, guid: fb0d6bfa7a1de2e42a715e1d6cebf8fd, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
@@ -67,11 +67,16 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _LightPower: 2.1
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
+    - _OffsetIntensity: 0
     - _Oultine: 0.1471338
     - _Parallax: 0.02
+    - _Power: 2.1
+    - _Scaler: 10
+    - _ShadePower: 2.1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -80,4 +85,7 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 0.7866709, b: 0.6819462, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _LightColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _LineColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _ShadeColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _ShadowColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
