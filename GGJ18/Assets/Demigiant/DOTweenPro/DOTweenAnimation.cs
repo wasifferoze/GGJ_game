@@ -5,7 +5,6 @@ using System;
 using System.Collections.Generic;
 using DG.Tweening.Core;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
 
 #if DOTWEEN_TMP

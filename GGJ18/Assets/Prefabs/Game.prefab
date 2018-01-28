@@ -708,6 +708,8 @@ MonoBehaviour:
     type: 2}
   PawnSpawnManager: {fileID: 11400000, guid: df168a8bf3d948e429a48a16c9fef332, type: 2}
   SpawnCount: 45
+  OnWin: {fileID: 11400000, guid: 05e0baf47eb34ac469b530b5f67ed5c3, type: 2}
+  OnDie: {fileID: 11400000, guid: 3df10d4129847c1459061ec2e449e968, type: 2}
 --- !u!114 &114454949082006822
 MonoBehaviour:
   m_ObjectHideFlags: 1
