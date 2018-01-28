@@ -216,14 +216,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1193989750125364}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.000000059604645, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4176132082180258}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!23 &23090997411006120
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -340,7 +340,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 976fc9bc4f09a7443b584ed759e8d804, type: 3}
+  - {fileID: 2100000, guid: 43b0fdf71c928ff4182ee48b9a43ddd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -444,6 +444,9 @@ MonoBehaviour:
   Radius: {fileID: 11400000, guid: 0d96b0ae1f22b4e4fbf4f3338c43d334, type: 2}
   MaxSpeed: {fileID: 11400000, guid: 64624dae345fb459184f3a619cb44747, type: 2}
   Friction: {fileID: 11400000, guid: 16316e5fdc78e4d53baccc80cc052f5a, type: 2}
+  SpeedDecay: {fileID: 11400000, guid: 6f992dd4e34b2c6439f31a512e14f3e4, type: 2}
   CurrentSpeed: 0
   CurrentAngle: 0
-  DEBUGANGLE: 0
+  SlingShootEvent: {fileID: 11400000, guid: f200bfb6550536847a176f8fb484205c, type: 2}
+  SlingShootValue: {fileID: 11400000, guid: 70f781d057f7a7948a8a0b01fe276585, type: 2}
+  SlingShootPower: {fileID: 11400000, guid: 1bf87a0775f0ca446ac5fe213b404937, type: 2}

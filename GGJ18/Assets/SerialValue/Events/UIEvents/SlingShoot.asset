@@ -8,12 +8,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 183f3cab95a5d4145acc57d6ab521c01, type: 3}
-  m_Name: CollisionManager
+  m_Script: {fileID: 11500000, guid: 4899f319338926d4398180b8280729d2, type: 3}
+  m_Name: SlingShoot
   m_EditorClassIdentifier: 
-  StageArea:
-    serializedVersion: 2
-    x: -150
-    y: -7
-    width: 157
-    height: 14
+  Events: []

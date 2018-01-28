@@ -9,11 +9,30 @@ namespace AssemblyCSharp.Scripts
     {
         [SerializeField] public Rect StageArea;
 
-        public readonly List<ICollidable> Collidables = new List<ICollidable>();
+        private List<ICollidable> Collidables = new List<ICollidable>();
+
+        public void ReportCollidable(ICollidable item)
+        {
+            if (!Collidables.Contains(item))
+            {
+                Collidables.Add(item);
+            }
+        }
+
+        public void ClearCollidables()
+        {
+            Collidables.Clear();
+        }
+
+        public ICollidable GetCollidable(int idx)
+        {
+            return Collidables[idx];
+        }
 
         public void Init()
         {
             Collidables.Clear();
+            Collidables.ForEach((item) => Debug.Log(item));
         }
 
         public IEnumerator FindCollision()
@@ -32,7 +51,7 @@ namespace AssemblyCSharp.Scripts
                         if (process-- <= 0)
                         {
                             process = PROCESS_PER_FRAME;
-                            yield return null;
+                            // yield return null;
                         }
 
                         ICollidable A = Collidables[i];
@@ -44,7 +63,7 @@ namespace AssemblyCSharp.Scripts
                             A.OnCollide(B, delta);
                             B.OnCollide(A, -delta);
                         }
-
+                        
                         // Wrap to stage
                         var pos = A.GetPosition();
                         var a = A.GetAngle();

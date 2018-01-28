@@ -9,7 +9,7 @@ namespace AssemblyCSharp.Scripts
         [SerializeField] public PawnSpawnManager PawnSpawnManager;
         [SerializeField] public int SpawnCount = 30;
 
-        void Start()
+        void Awake()
         {
             InitCollisionManager();
             InitLevelGenerationManager();

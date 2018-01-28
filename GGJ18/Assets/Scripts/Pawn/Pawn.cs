@@ -1,10 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-#if UNITY_EDITOR
-using UnityEditor;
-#endif
+﻿using UnityEngine;
+using AssemblyCSharp.Scripts.SerialValue;
 
 namespace AssemblyCSharp.Scripts
 {
@@ -12,14 +7,15 @@ namespace AssemblyCSharp.Scripts
     {
         public CollisionManager CollisionManager;
 
-        public SerialFloat Radius;
-        public SerialFloat MaxSpeed;
-        public SerialFloat Friction;
+        [SerializeField] public SerialFloat Radius;
+        [SerializeField] public SerialFloat MaxSpeed;
+        [SerializeField] public SerialFloat Friction;
+        [SerializeField] public SerialFloat SpeedDecay;
 
-        [HideInInspector] public float CurrentSpeed;
+        [HideInInspector] public float CurrentVelocity;
         [HideInInspector] public float CurrentAngle;
 
-        public System.Action OnSpawnEvent;
+        public System.Action OnSpawnedEvent;
         public System.Action OnCollideEvent;
 
         public float GetRadius()
@@ -59,15 +55,10 @@ namespace AssemblyCSharp.Scripts
             return delta.sqrMagnitude < sumRad * sumRad;
         }
 
-        public void OnCollide(ICollidable collidable, Vector2 delta)
+        public virtual void OnCollide(ICollidable collidable, Vector2 delta)
         {
-            CurrentSpeed *= Friction.Value;
-
-            float otherAngle = Mathf.Atan2(-delta.y, delta.x);
-
+            CurrentVelocity *= Friction.Value;
             SetAngle(Mathf.Atan2(delta.y, delta.x));
-            collidable.SetAngle(otherAngle);
-
             float targetDistance = GetRadius() + collidable.GetRadius() + 0.01f;
             Vector2 shift = new Vector2(
                                 x: Mathf.Cos(CurrentAngle) * targetDistance,
@@ -75,54 +66,58 @@ namespace AssemblyCSharp.Scripts
                             );
 
             SetPosition(collidable.GetPosition() + shift);
-            collidable.SetPosition(GetPosition() - shift);
 
             if (OnCollideEvent != null)
             {
                 OnCollideEvent.Invoke();
             }
+
+            // Pawn to pawn collision
+            if (collidable is Pawn)
+            {
+                Pawn otherPawn = collidable as Pawn;
+                float _velocity = CurrentVelocity;
+                CurrentVelocity = otherPawn.CurrentVelocity;
+                otherPawn.CurrentVelocity = _velocity;
+            }
         }
 
         private void Start()
         {
-            if (CollisionManager != null &&
-                !CollisionManager.Collidables.Contains(this))
-            {
-                CollisionManager.Collidables.Add(this);
-            }
-
-            if (OnSpawnEvent != null)
-            {
-                OnSpawnEvent.Invoke();
-            }
+            CollisionManager.ReportCollidable(this);
+            transform.forward = new Vector3(
+                x: Mathf.Cos(CurrentAngle),
+                y: 0.0f,
+                z: Mathf.Sin(CurrentAngle)
+            ).normalized;
 
             Init();
+
+            if (OnSpawnedEvent != null)
+            {
+                OnSpawnedEvent.Invoke();
+            }
         }
 
         protected virtual void Update()
         {
             Vector3 speed = new Vector3(
-                                x: CurrentSpeed * Mathf.Cos(CurrentAngle),
+                                x: CurrentVelocity * Mathf.Cos(CurrentAngle),
                                 y: 0.0f,
-                                z: CurrentSpeed * Mathf.Sin(CurrentAngle)
+                                z: CurrentVelocity * Mathf.Sin(CurrentAngle)
                             );
             transform.position += speed * Time.deltaTime;
-            Vector3 targetForward = speed.sqrMagnitude > 0.25f ? speed : transform.forward.normalized;
-            transform.forward = Vector3.Lerp(transform.forward, targetForward, 0.025f * Time.time);
+            if (speed.sqrMagnitude > 0.25f)
+            {
+                transform.forward = Vector3.Lerp(transform.forward, speed.normalized, 0.025f * Time.deltaTime);
+            }
+
+            CurrentVelocity *= SpeedDecay.Value / (Time.deltaTime * 60.0f);
         }
 
         protected virtual void Init()
         {
             // Do nothing
-        }
-
-        protected virtual void Die()
-        {
-            if (CollisionManager != null &&
-                CollisionManager.Collidables.Contains(this))
-            {
-                CollisionManager.Collidables.Remove(this);
-            }
         }
     }
 }

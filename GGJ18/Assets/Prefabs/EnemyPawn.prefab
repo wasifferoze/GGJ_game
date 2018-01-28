@@ -444,5 +444,6 @@ MonoBehaviour:
   Radius: {fileID: 11400000, guid: edf0aadbe14754047b63deb6b3a5efa4, type: 2}
   MaxSpeed: {fileID: 11400000, guid: e71bee53d3fe34490bc3e0bb36c51351, type: 2}
   Friction: {fileID: 11400000, guid: ad14d08d3870c4211a969e891d3895da, type: 2}
+  SpeedDecay: {fileID: 11400000, guid: 8e2e58d78128ab94e9e595ff9c16ad2a, type: 2}
   CurrentSpeed: 0
   CurrentAngle: 0
