@@ -45,23 +45,6 @@ namespace AssemblyCSharp.Scripts
             enabled = false;
         }
 
-        protected override void Update()
-        {
-            if (!IsAlive) { return; }
-
-            Vector3 speed = new Vector3(
-                                x: CurrentVelocity * Mathf.Cos(CurrentAngle),
-                                y: 0.0f,
-                                z: CurrentVelocity * Mathf.Sin(CurrentAngle)
-                            );
-            transform.position += speed * Time.deltaTime;
-            if (speed.sqrMagnitude > 0.1f)
-            {
-                transform.forward = speed.normalized;
-            }
-            CurrentVelocity *= SpeedDecay.Value / (Time.deltaTime * 60.0f);
-        }
-
         public override void OnCollide(ICollidable collidable, Vector2 delta)
         {
             return;

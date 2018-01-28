@@ -400,7 +400,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1754726370668014}
-  m_Mesh: {fileID: 4300000, guid: 976fc9bc4f09a7443b584ed759e8d804, type: 3}
+  m_Mesh: {fileID: 4300006, guid: 14a541cb01c886148b1628accd620018, type: 3}
 --- !u!33 &33391444515099558
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -445,5 +445,5 @@ MonoBehaviour:
   MaxSpeed: {fileID: 11400000, guid: e71bee53d3fe34490bc3e0bb36c51351, type: 2}
   Friction: {fileID: 11400000, guid: ad14d08d3870c4211a969e891d3895da, type: 2}
   SpeedDecay: {fileID: 11400000, guid: 8e2e58d78128ab94e9e595ff9c16ad2a, type: 2}
-  CurrentSpeed: 0
+  CurrentVelocity: 0
   CurrentAngle: 0

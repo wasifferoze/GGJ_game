@@ -101,17 +101,16 @@ namespace AssemblyCSharp.Scripts
 
         protected virtual void Update()
         {
-            Vector3 speed = new Vector3(
-                                x: CurrentVelocity * Mathf.Cos(CurrentAngle),
-                                y: 0.0f,
-                                z: CurrentVelocity * Mathf.Sin(CurrentAngle)
-                            );
-            transform.position += speed * Time.deltaTime;
-            if (speed.sqrMagnitude > 0.25f)
-            {
-                transform.forward = Vector3.Lerp(transform.forward, speed.normalized, 0.025f * Time.deltaTime);
-            }
+            if (CurrentVelocity < Mathf.Epsilon) { return; }
 
+            Vector3 speed = new Vector3(
+                            x: CurrentVelocity * Mathf.Cos(CurrentAngle),
+                            y: 0.0f,
+                            z: CurrentVelocity * Mathf.Sin(CurrentAngle)
+                        );
+
+            transform.position += speed * Time.deltaTime;
+            transform.forward = speed.normalized;
             CurrentVelocity *= SpeedDecay.Value / (Time.deltaTime * 60.0f);
         }
 
