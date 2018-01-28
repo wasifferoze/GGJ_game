@@ -401,7 +401,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1754726370668014}
-  m_Mesh: {fileID: 4300000, guid: 976fc9bc4f09a7443b584ed759e8d804, type: 3}
+  m_Mesh: {fileID: 4300006, guid: 14a541cb01c886148b1628accd620018, type: 3}
 --- !u!33 &33261197101357958
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -466,7 +466,9 @@ MonoBehaviour:
   CurrentVelocity: 0
   CurrentAngle: 0
   SlingShootEvent: {fileID: 11400000, guid: f200bfb6550536847a176f8fb484205c, type: 2}
-  EnergyDepleted: {fileID: 11400000, guid: 3df10d4129847c1459061ec2e449e968, type: 2}
+  EnergyDepletedEvent: {fileID: 11400000, guid: 3df10d4129847c1459061ec2e449e968,
+    type: 2}
+  WinEvent: {fileID: 11400000, guid: 05e0baf47eb34ac469b530b5f67ed5c3, type: 2}
   SlingShootValue: {fileID: 11400000, guid: 70f781d057f7a7948a8a0b01fe276585, type: 2}
   SlingShootPower: {fileID: 11400000, guid: 1bf87a0775f0ca446ac5fe213b404937, type: 2}
   Animator: {fileID: 95227736053627258}

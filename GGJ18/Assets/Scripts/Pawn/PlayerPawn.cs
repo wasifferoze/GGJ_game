@@ -7,7 +7,8 @@ namespace AssemblyCSharp.Scripts
     public sealed class PlayerPawn : Pawn
     {
         [SerializeField] public SerialEvent SlingShootEvent;
-        [SerializeField] public SerialEvent EnergyDepleted;
+        [SerializeField] public SerialEvent EnergyDepletedEvent;
+        [SerializeField] public SerialEvent WinEvent;
 
         [SerializeField] public SerialVector2 SlingShootValue;
         [SerializeField] public SerialFloat SlingShootPower;
@@ -23,7 +24,11 @@ namespace AssemblyCSharp.Scripts
 
             var energyDepletedUnityEvent = new UnityEvent();
             energyDepletedUnityEvent.AddListener(new UnityAction(OnEnergyDepleted));
-            EnergyDepleted.AddListener(energyDepletedUnityEvent);
+            EnergyDepletedEvent.AddListener(energyDepletedUnityEvent);
+
+            var winUnitytEvent = new UnityEvent();
+            winUnitytEvent.AddListener(new UnityAction(OnWin));
+            WinEvent.AddListener(winUnitytEvent);
         }
 
         private void OnSlingShoot()
@@ -41,6 +46,15 @@ namespace AssemblyCSharp.Scripts
             if (!IsAlive) { return; }
 
             Animator.Play("EnergyDepletedDie");
+            IsAlive = false;
+            enabled = false;
+        }
+
+        private void OnWin()
+        {
+            if (!IsAlive) { return; }
+
+            Animator.Play("PlayerWin");
             IsAlive = false;
             enabled = false;
         }

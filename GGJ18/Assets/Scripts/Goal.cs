@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using AssemblyCSharp.Scripts.SerialValue;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,6 +8,7 @@ namespace AssemblyCSharp.Scripts
     public class Goal : MonoBehaviour, ICollidable
     {
         [SerializeField] public CollisionManager CollisionManager;
+        [SerializeField] public SerialEvent WinEvent;
 
         public float GetAngle()
         {
@@ -36,7 +38,8 @@ namespace AssemblyCSharp.Scripts
             PlayerPawn player = collidable as PlayerPawn;
             if (player == null) { return; }
 
-            Debug.Log("Win!");
+            WinEvent.Invoke();
+            gameObject.SetActive(false);
         }
 
         public void SetAngle(float angle)
