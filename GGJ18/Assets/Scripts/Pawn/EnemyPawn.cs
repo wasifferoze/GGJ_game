@@ -7,6 +7,7 @@ namespace AssemblyCSharp.Scripts
     {
         protected override void Init()
         {
+            IsInfected = Random.value < 0.5f;
             StartCoroutine(Wandering());
         }
 

@@ -9,6 +9,8 @@ namespace AssemblyCSharp.Scripts
         [SerializeField] public SerialEvent SlingShootEvent;
         [SerializeField] public SerialEvent EnergyDepletedEvent;
         [SerializeField] public SerialEvent WinEvent;
+        [SerializeField] public SerialEvent InfectedEvent;
+        [SerializeField] public SerialEvent DeinfectedEvent;
 
         [SerializeField] public SerialVector2 SlingShootValue;
         [SerializeField] public SerialFloat SlingShootPower;
@@ -29,6 +31,18 @@ namespace AssemblyCSharp.Scripts
             var winUnitytEvent = new UnityEvent();
             winUnitytEvent.AddListener(new UnityAction(OnWin));
             WinEvent.AddListener(winUnitytEvent);
+
+            OnInfectiousChange += new System.Action<bool>((isInfected) =>
+            {
+                if (isInfected)
+                {
+                    InfectedEvent.Invoke();
+                }
+                else
+                {
+                    DeinfectedEvent.Invoke();
+                }
+            });
         }
 
         private void OnSlingShoot()

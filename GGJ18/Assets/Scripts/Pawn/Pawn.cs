@@ -12,11 +12,33 @@ namespace AssemblyCSharp.Scripts
         [SerializeField] public SerialFloat Friction;
         [SerializeField] public SerialFloat SpeedDecay;
 
+        [SerializeField] public GameObject InfectedFX;
+
         [HideInInspector] public float CurrentVelocity;
         [HideInInspector] public float CurrentAngle;
 
         public System.Action OnSpawnedEvent;
         public System.Action OnCollideEvent;
+        public System.Action<bool> OnInfectiousChange;
+
+        private bool _isInfected = false;
+        public bool IsInfected
+        {
+            get
+            {
+                return _isInfected;
+            }
+            set
+            {
+                _isInfected = value;
+                InfectedFX.SetActive(value);
+
+                if (OnInfectiousChange != null)
+                {
+                    OnInfectiousChange.Invoke(value);
+                }
+            }
+        }
 
         public float GetRadius()
         {
@@ -79,6 +101,10 @@ namespace AssemblyCSharp.Scripts
                 float _velocity = CurrentVelocity;
                 CurrentVelocity = otherPawn.CurrentVelocity;
                 otherPawn.CurrentVelocity = _velocity;
+
+                bool _infections = IsInfected;
+                IsInfected = otherPawn.IsInfected;
+                otherPawn.IsInfected = _infections;
             }
         }
 
