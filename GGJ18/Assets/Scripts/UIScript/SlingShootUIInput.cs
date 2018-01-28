@@ -10,6 +10,7 @@ namespace AssemblyCSharp.Scripts
     {
         [SerializeField] public SerialEvent OnSlingShootEvent;
         [SerializeField] public SerialVector2 SlingShootValue;
+        [SerializeField] public SerialFloat SlingShootDelay;
         [SerializeField] public Image Hook;
         [SerializeField] public ControlMode ControlMode;
 
@@ -17,6 +18,7 @@ namespace AssemblyCSharp.Scripts
         private Vector3 InitialHookPosition;
         private Vector2 DragStartPosition;
         private bool IsMouseDragging = false;
+        private float AvailableTime;
 
         private void Start()
         {
@@ -26,6 +28,8 @@ namespace AssemblyCSharp.Scripts
 
         private void Update()
         {
+            if (Time.time < AvailableTime) { return; }
+
             if (ControlMode == ControlMode.Mouse)
             {
                 HandleMouse();
@@ -63,6 +67,8 @@ namespace AssemblyCSharp.Scripts
 
                 transform.position = InitialZonePosition;
                 Hook.transform.position = InitialHookPosition;
+
+                AvailableTime = Time.time + SlingShootDelay.Value;
             }
         }
 
@@ -89,6 +95,8 @@ namespace AssemblyCSharp.Scripts
 
                 transform.position = InitialZonePosition;
                 Hook.transform.position = InitialHookPosition;
+
+                AvailableTime = Time.time + SlingShootDelay.Value;
                 return;
             }
 

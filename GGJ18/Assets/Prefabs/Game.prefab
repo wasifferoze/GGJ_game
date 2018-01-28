@@ -651,6 +651,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnSlingShootEvent: {fileID: 11400000, guid: f200bfb6550536847a176f8fb484205c, type: 2}
   SlingShootValue: {fileID: 11400000, guid: 70f781d057f7a7948a8a0b01fe276585, type: 2}
+  SlingShootDelay: {fileID: 11400000, guid: 0d7faceb85bba6c48811380d369bdcfe, type: 2}
   Hook: {fileID: 114015651033568462}
   ControlMode: 1
 --- !u!114 &114907033980092302
@@ -692,8 +693,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Energy: {fileID: 11400000, guid: 0d8ba11e1192a22488e12d4154c572eb, type: 2}
+  EnergyDepleted: {fileID: 11400000, guid: 3df10d4129847c1459061ec2e449e968, type: 2}
   Slider: {fileID: 114275480233589564}
-  GameTimeInSeconds: 60
+  GameTimeInSeconds: 30
 --- !u!222 &222088754648259562
 CanvasRenderer:
   m_ObjectHideFlags: 1

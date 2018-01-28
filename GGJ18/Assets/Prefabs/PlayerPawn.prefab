@@ -120,6 +120,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4176132082180258}
+  - component: {fileID: 95227736053627258}
   m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
@@ -429,6 +430,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1050745356629552}
   m_Mesh: {fileID: 4300004, guid: 976fc9bc4f09a7443b584ed759e8d804, type: 3}
+--- !u!95 &95227736053627258
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1947993104349890}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8ff9b4bfed556d34e9d37c4e78bcdef4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114276501806073660
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -445,8 +463,10 @@ MonoBehaviour:
   MaxSpeed: {fileID: 11400000, guid: 64624dae345fb459184f3a619cb44747, type: 2}
   Friction: {fileID: 11400000, guid: 16316e5fdc78e4d53baccc80cc052f5a, type: 2}
   SpeedDecay: {fileID: 11400000, guid: 6f992dd4e34b2c6439f31a512e14f3e4, type: 2}
-  CurrentSpeed: 0
+  CurrentVelocity: 0
   CurrentAngle: 0
   SlingShootEvent: {fileID: 11400000, guid: f200bfb6550536847a176f8fb484205c, type: 2}
+  EnergyDepleted: {fileID: 11400000, guid: 3df10d4129847c1459061ec2e449e968, type: 2}
   SlingShootValue: {fileID: 11400000, guid: 70f781d057f7a7948a8a0b01fe276585, type: 2}
   SlingShootPower: {fileID: 11400000, guid: 1bf87a0775f0ca446ac5fe213b404937, type: 2}
+  Animator: {fileID: 95227736053627258}
