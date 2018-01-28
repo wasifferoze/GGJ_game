@@ -916,6 +916,8 @@ MonoBehaviour:
   Energy: {fileID: 11400000, guid: 0d8ba11e1192a22488e12d4154c572eb, type: 2}
   EnergyDepleted: {fileID: 11400000, guid: 3df10d4129847c1459061ec2e449e968, type: 2}
   WinEvent: {fileID: 11400000, guid: 05e0baf47eb34ac469b530b5f67ed5c3, type: 2}
+  InfectedEvent: {fileID: 11400000, guid: 9c51b0b7f3c77474faff6dbb5ea51a1d, type: 2}
+  DeinfectedEvent: {fileID: 11400000, guid: 6d1aa2bc95be434408b340779dd092bf, type: 2}
   Slider: {fileID: 114275480233589564}
   GameTimeInSeconds: 30
 --- !u!222 &222088754648259562
