@@ -33,11 +33,11 @@ public class FillEnergyUI : MonoBehaviour {
 
 			print (TouchControl.touchPresent);
 			if (TouchControl.touchPresent == true) {
-			//yield return new WaitForSeconds (UpdateDelay);
+				//yield return new WaitForSeconds (UpdateDelay);
 				BarBehaviour.Value += 1;
-				print ("new value: " + BarBehaviour.Value);
+				//print ("new value: " + BarBehaviour.Value);
 			} else {
-				print ("new value: " + BarBehaviour.Value);
+				//print ("new value: " + BarBehaviour.Value);
 			}
 
 	}
