@@ -11,4 +11,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7450ee8c5b59c42afa82e75ccb6557e8, type: 3}
   m_Name: Energy
   m_EditorClassIdentifier: 
-  Value: -0.033333335
+  Value: 0.09999964

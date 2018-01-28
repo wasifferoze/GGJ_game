@@ -786,11 +786,6 @@ Prefab:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114903203384575468, guid: e5d8f3353a5af8949a971f3650c3401f,
-        type: 2}
-      propertyPath: m_Color.a
-      value: 0.328
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5d8f3353a5af8949a971f3650c3401f, type: 2}
   m_IsPrefabParent: 0
